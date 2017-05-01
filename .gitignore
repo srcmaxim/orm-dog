@@ -1,0 +1,9 @@
+#IDEA
+.idea
+orm-dog.iml
+
+#MAVEN
+/target
+
+#ORM DOG VERSIONS
+!versions/orm-dog-*.jar
