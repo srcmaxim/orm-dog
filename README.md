@@ -11,7 +11,7 @@
 Table creates Table with Columns. Also, it scans for Id, GeneratedValue, Column annotations in the entity.
 3. Connects to DB using JDBC.
 4. For every transaction calls orm.transaction().doInTransaction([query])
-    1. Query gets Table definition with all string for PreparedStatement.
+    1. Query gets Table definition with DDL, DML strings for PreparedStatement.
     2. Query sets params for PreparedStatement (you can use many queries in the transaction).
 5. Depending on situation transaction will be committed or rolled back.
 
