@@ -37,3 +37,7 @@ try {
     e.printStackTrace();
 }
 ```
+
+### Versions
+
+- [ORM Dog 1.0](https://github.com/srcmaxim/orm-dog/raw/master/versions/orm-dog-1.0.jar)
