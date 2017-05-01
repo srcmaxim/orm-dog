@@ -7,12 +7,12 @@
 ### How it works      
 
 1. Loads entities from your package.
-2. For each entity declarated with @javax.persistent.Entity and @javax.persistent.Entity
-creates Table with Columns. Also it scans for Id, GeneratedValue, Column annotations in Class.
+2. For each entity declarated with @javax.persistent.Entity and @javax.persistent.Table
+creates Table with Columns. Also, it scans for Id, GeneratedValue, Column annotations in the entity.
 3. Connects to DB using JDBC.
-4. For every new query calls orm.transaction().doInTransaction([query])
-    4.1 Query gets Table definition with all string for using in PreparedStatement.
-    4.2 Query sets params for PreparedStatement (u can use many queries in transaction).
+4. For every transaction calls orm.transaction().doInTransaction([query])
+    1. The Query gets Table definition with all string for PreparedStatement.
+    2. Query sets params for PreparedStatement (you can use many queries in the transaction).
 5. Depending on situation transaction will be committed or rolled back.
 
 ### Using API
